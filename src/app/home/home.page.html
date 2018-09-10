@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            IndexDB Test
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label position="floating">请输入需要添加的数据</ion-label>
+        <ion-input type="text" maxlength="5" #data></ion-input>
+        <button class="addBtn" (click)="add(data.value)">添加</button>
+    </ion-item>
+
+
+    <div *ngIf="!results.length" class="null">你还没有数据</div>
+
+    <ng-container *ngFor="let row of results">
+        <div class="row">
+            <div class="id">{{row.id}}</div>
+            <div class="name" (click)="clickName(row.id)">{{row.name}}</div>
+            <div class="delete" (click)="delete(row.id)">
+                <ion-icon slot="start" name="close"></ion-icon>
+            </div>
+        </div>
+    </ng-container>
+
+
+    <div *ngIf="thisId" class="alert">
+        <ion-item lines="full">
+            <ion-label position="floating">请输入你的新名字</ion-label>
+            <ion-input type="text" maxlength="5" #newData></ion-input>
+            <button class="updateBtn" (click)="upDate(newData.value)">确定修改</button>
+        </ion-item>
+    </div>
+
+    <ion-input [(ngModel)]="console"></ion-input>
+</ion-content>

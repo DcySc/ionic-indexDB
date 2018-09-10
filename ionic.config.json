@@ -1,0 +1,7 @@
+{
+  "name": "indexdb",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

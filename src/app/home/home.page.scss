@@ -1,0 +1,79 @@
+$height: 50px;
+
+.null {
+  margin: 1em;
+}
+
+.row {
+  display: flex;
+  width: 250px;
+  height: $height;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 20px;
+  margin: 0.5em;
+
+  .id {
+    width: 50px;
+    height: 100%;
+    line-height: $height;
+    background-color: #5F7D8C;
+    text-align: center;
+    color: white;
+  }
+
+
+  .name {
+    flex-grow: 1;
+    height: 100%;
+    line-height: $height;
+    background-color: #EEE;
+    text-align: center;
+  }
+
+  .delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 100%;
+
+    background-color: #5F7D8C;
+    color: white;
+    font-size:30px;
+  }
+}
+
+ion-item {
+  position: relative;
+
+  .addBtn {
+    position: absolute;
+    right: 30px;
+    bottom: 6px;
+    width: 50px;
+    height: 30px;
+    background-color: #3f79e0;
+    border-radius: 10px;
+    color: white;
+    outline: 0;
+  }
+}
+
+.alert {
+  position: fixed;
+  top: 50px;
+  left: 10%;
+  background-color: whitesmoke;
+  width: 80%;
+}
+
+.updateBtn {
+  margin: 10px auto;
+  height: 30px;
+  width: 100px;
+  background-color: #3f79e0;
+  color: white;
+  border-radius: 5px;
+}
+
